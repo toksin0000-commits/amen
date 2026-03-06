@@ -1,0 +1,29 @@
+{
+  "home": "Home",
+  "back_home": "Home",
+  "bible": "Bible",
+  "churches": "Churches",
+  "wishes": "Wishes",
+  
+  "verse_of_day": "Verse of the Day",
+  "prayer_of_day": "Prayer of the Day",
+  "home_prayer_text": "Lord, guide me today with Your peace and light.",
+  "home_verse_text": "“I am the way and the truth and the life.” (John 14:6)",
+  
+  "wish_prompt": "What would you like to pray for today?",
+  "wishes_title": "Wishes of the Day",
+  "wishes_subtitle": "What would you like to pray for today?",
+  "wishes_placeholder": "Write your prayer…",
+  "wishes_list_title": "Prayers of the Day",
+  "wishes_submitted": "Your wish has been added to today's prayers.",
+  
+  "sending": "Sending…",
+  "send": "Send",
+  
+  "bible_book": "Book",
+  "bible_chapter": "Chapter",
+  "bible_placeholder": "Bible reader – coming soon.",
+  "bible_error": "Failed to load Bible text.",
+  
+  "churches_placeholder": "List of churches and mass times will be here."
+}

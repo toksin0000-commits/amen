@@ -1,0 +1,29 @@
+{
+  "home": "Domů",
+  "back_home": "Domů",
+  "bible": "Bible",
+  "churches": "Kostely",
+  "wishes": "Přání",
+  
+  "verse_of_day": "Biblický verš dne",
+  "prayer_of_day": "Modlitba dne",
+  "home_prayer_text": "Pane, provázej mě dnes svým pokojem a světlem.",
+  "home_verse_text": "„Já jsem cesta, pravda i život.“ (Jan 14,6)",
+  
+  "wish_prompt": "Za co toužíš prosit dnes?",
+  "wishes_title": "Přání dne",
+  "wishes_subtitle": "Za co toužíš prosit dnes?",
+  "wishes_placeholder": "Napiš svou prosbu…",
+  "wishes_list_title": "Modlitby dne",
+  "wishes_submitted": "Tvé přání bylo přidáno mezi modlitby dne.",
+  
+  "sending": "Odesílám…",
+  "send": "Odeslat",
+  
+  "bible_book": "Kniha",
+  "bible_chapter": "Kapitola",
+  "bible_placeholder": "Čtečka Bible – brzy bude doplněno.",
+  "bible_error": "Nepodařilo se načíst text Bible.",
+  
+  "churches_placeholder": "Zde bude seznam kostelů a časy mší."
+}
