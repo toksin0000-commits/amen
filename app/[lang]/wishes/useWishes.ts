@@ -11,7 +11,7 @@ type Wish = {
   is_hidden?: boolean;
 };
 
-// 📚 VLASTNÍ KNIHOVNA PRO FILTRACI SPROSTÝCH SLOV (VŠECHNY JAZYKY DOHROMADY)
+// 📚 VLASTNÍ KNIHOVNA PRO FILTRACI SPROSTÝCH SLOV
 const badWords = [
   // Anglická
   'fuck', 'shit', 'damn', 'cunt', 'asshole', 'bastard', 'bitch', 'dick', 'piss',
@@ -21,8 +21,6 @@ const badWords = [
   'kurva', 'pica', 'píča', 'kokot', 'čurák', 'debil', 'kretén', 'zmrd', 'hajzl',
   'mrdat', 'sracka', 'sračka', 'posera', 'zjebany', 'zjebaný', 'zjebat', 'do pice',
   'do piče', 'do prdele', 'do hajzlu', 'do hajzla', 'kundo', 'kunda',
-  
-  // Můžeš přidat i urdská, pokud najdeš seznam
 ];
 
 const containsBadWords = (text: string): boolean => {
@@ -69,7 +67,7 @@ export const useWishes = (dict: any, lang: string) => {
     checkDailyLimit();
   }, [ipAddress, lang]);
 
-  // Načtení přání
+  // 🔥 Stabilní načítání přání
   const loadWishes = async () => {
     try {
       const { data, error } = await supabase
@@ -80,7 +78,16 @@ export const useWishes = (dict: any, lang: string) => {
         .limit(50);
 
       if (error) throw error;
-      if (data) setWishes(data);
+      if (!data) return;
+
+      // 🔥 Pokud se data nezměnila → NEDĚLEJ setWishes → žádné skákání
+      const same =
+        wishes.length === data.length &&
+        wishes.every((w, i) => w.id === data[i].id);
+
+      if (!same) {
+        setWishes(data);
+      }
 
     } catch (err) {
       console.error('Chyba při načítání:', err);
@@ -88,7 +95,7 @@ export const useWishes = (dict: any, lang: string) => {
     }
   };
 
-  // Automatický refresh
+  // Automatický refresh (chytrý, stabilní)
   useEffect(() => {
     loadWishes();
     const interval = setInterval(loadWishes, 5000);
@@ -186,7 +193,6 @@ export const useWishes = (dict: any, lang: string) => {
   };
 
   return {
-    // Data
     wishes,
     loading,
     error: fetchError,
@@ -195,8 +201,6 @@ export const useWishes = (dict: any, lang: string) => {
     submitted,
     reportingId,
     honeypot,
-    
-    // Funkce
     setText,
     setHoneypot,
     handleSubmit,
