@@ -80,7 +80,8 @@ export const useWishes = (dict: any, lang: string) => {
         .limit(50);
 
       if (error) throw error;
-      if (data) setWishes([...data].sort(() => Math.random() - 0.5));
+      if (data) setWishes(data);
+
     } catch (err) {
       console.error('Chyba při načítání:', err);
       setFetchError('Nepodařilo se načíst přání');
