@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.vercel.amen_kappa.twa",
+      "sha256_cert_fingerprints": [
+        "56:A7:C4:B6:6B:DB:57:9D:85:22:50:43:39:2F:FF:FD:B4:3A:25:5F:B2:F6:B1:0D:E4:F1:62:D8:8B:E9:B5:6C"
+      ]
+    }
+  }
+]
